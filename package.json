@@ -2,7 +2,7 @@
   "name": "ariq",
   "version": "1.0.0",
   "description": "test",
-  "main": "cariPrima.js",
+  "main": "euclidian.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
