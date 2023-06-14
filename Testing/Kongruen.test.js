@@ -1,30 +1,28 @@
-const Kongruen = require('./Kongruen');
-
-
+const Kongruen = require('../Revisi/Kongruen');
 
 
 test("Simetrive - 7,12,5", () => {
-    expect(cek_kongruen(7,12,5)).toBe(true);
+    expect(Kongruen(7,12,5)).toEqual(expect.not.stringContaining("bukan"))
 });
 
 test("Simetrive - 12,7,5", () => {
-    expect(cek_kongruen(12,7,5)).toBe(true);
+    expect(Kongruen(12,7,5)).toEqual(expect.not.stringContaining("bukan"))
 });
 
 test("Transitive - 12,17,5", () => {
-    expect(cek_kongruen(12,17,5)).toBe(true);
+    expect(Kongruen(12,17,5)).toEqual(expect.not.stringContaining("bukan"))
 });
 
 test("Reflexive - 12,12,5", () => {
-    expect(cek_kongruen(12,12,3)).toBe(true);
+    expect(Kongruen(12,12,3)).toEqual(expect.not.stringContaining("bukan"))
 });
 
 test("Direct Proof - 13, -1, 7", () => {
-    expect(Kongruen(13, -1, 7)).toBe(true);
+    expect(Kongruen(13, -1, 7)).toEqual(expect.not.stringContaining("bukan"))
 });
 
 test("Direct Proof - 23, 3, 7", () => {
-    expect(Kongruen(23, 3, 7)).toBe(false);
+    expect(Kongruen(23, 3, 7)).toEqual(expect.stringContaining("bukan merupakan kelipatan"))
 });
 
 test("Test Error - Kongruen - 23, 3, a", () => {

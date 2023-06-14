@@ -1,4 +1,4 @@
-const euclidean = require('./Euclidean');
+const euclidean = require('../Revisi/Euclidean');
 
 test("Direct Proof - Euclidean - 312 dan 70", () => {
     expect(euclidean(312, 70)).toBe(2);
