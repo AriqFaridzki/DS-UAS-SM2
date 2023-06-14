@@ -42,10 +42,6 @@ const ValidateNumberInputEuclidean = (a,b) => {
         throw new ValidationError("Argumen kedua harus melebihi 0");
     }
 
-    if(b == a){
-        throw new ValidationError("Argumen pertama dan kedua tidak boleh sama");
-    }
-
     if(b > a){
         throw new ValidationError("Argumen pertama harus lebih besar dari argumen kedua");
     }
