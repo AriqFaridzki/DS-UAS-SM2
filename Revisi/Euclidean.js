@@ -1,14 +1,14 @@
-const readline = require('readline-sync');
+// const readline = require('readline-sync');
 
-const getAngka =  () =>{
-    const firstNumber = readline.question("Masukan Angka Pertama : ");
-    // console.log(`you input : ${firstNumber}`);
+// const getAngka =  () =>{
+//     const firstNumber = readline.question("Masukan Angka Pertama : ");
+//     // console.log(`you input : ${firstNumber}`);
 
-    const secondNumber = readline.question("Masukan Angka Kedua : ");
-    // console.log(`you input : ${secondNumber}`);
+//     const secondNumber = readline.question("Masukan Angka Kedua : ");
+//     // console.log(`you input : ${secondNumber}`);
 
-    return [parseInt(firstNumber), parseInt(secondNumber)];
-}
+//     return [parseInt(firstNumber), parseInt(secondNumber)];
+// }
 
 
 const euclidean = (m,n) => {
@@ -29,7 +29,7 @@ const euclidean = (m,n) => {
     
     }
 
-let Angka = getAngka()
-console.log(euclidean(Angka[0], Angka[1]))
+// let Angka = getAngka()
+// console.log(euclidean(Angka[0], Angka[1]))
 
 module.exports = euclidean

@@ -1,27 +1,29 @@
-let hasil, angka;
+// let hasil, angka;
 
-const readline = require('readline-sync');
+// const readline = require('readline-sync');
 
-const getAngka =  () =>{
-    const firstNumber = readline.question("Masukan Angka Pertama : ");
-    // console.log(`you input : ${firstNumber}`);
+// const getAngka =  () =>{
+//     const firstNumber = readline.question("Masukan Angka Pertama : ");
+//     // console.log(`you input : ${firstNumber}`);
 
-    const secondNumber = readline.question("Masukan Angka Kedua : ");
+//     const secondNumber = readline.question("Masukan Angka Kedua : ");
 
-    const modulus = readline.question("Masukan Angka Modulusnya : ");
-    // console.log(`you input : ${secondNumber}`);
+//     const modulus = readline.question("Masukan Angka Modulusnya : ");
+//     // console.log(`you input : ${secondNumber}`);
 
-    return [parseInt(firstNumber), parseInt(secondNumber), parseInt(modulus)];
-}
+//     return [parseInt(firstNumber), parseInt(secondNumber), parseInt(modulus)];
+// }
 
 
 
 const cek_kongruen = (a, b, mod) => {
     hasil =  ((konversi_ke_positif(a-b)) % mod == 0);
     if (hasil == true) {
-        return `${a} ≡ ${b} (mod ${mod}) itu ${hasil} dan merupakan kelipatan dari ${mod}` ;
+        // console.log(`${a} ≡ ${b} (mod ${mod}) itu ${hasil} dan merupakan kelipatan dari ${mod}` );
+        return hasil
     } else
-        return `${a} ≡ ${b} (mod ${mod}) itu ${hasil} dan bukan merupakan kelipatan dari ${mod}` ;
+        // console.log(`${a} ≡ ${b} (mod ${mod}) itu ${hasil} dan bukan merupakan kelipatan dari ${mod}`) ;
+        return hasil
 };
 
 const konversi_ke_positif = (angka) => {
@@ -32,14 +34,16 @@ const konversi_ke_positif = (angka) => {
     return angka
 }
 
-angka = getAngka()
-console.log(cek_kongruen(angka[0],angka[1],angka[2]))
+// angka = getAngka()
+// console.log(cek_kongruen(angka[0],angka[1],angka[2]))
 
-// console.log(cek_kongruen(3, 24, 7))
-// console.log(cek_kongruen(-31, 11, 7))
-// console.log(cek_kongruen(-15, -64, 7))
-// console.log(cek_kongruen(13, -1, 7))
-// console.log(cek_kongruen(23, 3, 7))
+
+
+console.log(cek_kongruen(3, 24, 7))
+console.log(cek_kongruen(-31, 11, 7))
+console.log(cek_kongruen(-15, -64, 7))
+console.log(cek_kongruen(13, -1, 7))
+console.log(cek_kongruen(23, 3, 7))
 
 
 //TODO tinggal validasi, input.

@@ -69,7 +69,7 @@ const algoritmaPrima1 = (number)=>{
     console.log("")
 
     if(keputusan == true){
-        return "ENTE PRIMAAAAAAAAAAAAAAA \n\n\n\n\n"
+        return "Prima, karena tidak bisa dibagi \n\n\n\n\n"
         
     } else{
         return `Bukan Prima, karena bisa dibagi oleh ${pembagi} \n\n\n\n\n `
