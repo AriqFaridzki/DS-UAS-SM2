@@ -14,12 +14,7 @@
 //     return [parseInt(firstNumber), parseInt(secondNumber), parseInt(modulus)];
 // }
 
-class ValidationError extends Error {
-    constructor(message){
-        super(message);
-        this.name = "ValidationError";
-    }
-}
+const ValidationError = require('../ErrorHandler/ErrorHandler')
 
 const ValidateNumberInput = (a,b,mod) => {
 
@@ -66,7 +61,7 @@ const konversi_ke_positif = (angka) => {
 
 // angka = getAngka()
 // console.log(cek_kongruen(angka[0],angka[1],angka[2]))
-// console.log(cek_kongruen(false, null, "a"))
+console.log(cek_kongruen(false, null, "a"))
 
 module.exports = cek_kongruen;
 
