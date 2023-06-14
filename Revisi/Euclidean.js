@@ -11,6 +11,37 @@
 // }
 
 
+const ValidationError = require('../ErrorHandler/ErrorHandler')
+
+const ValidateNumberInput = (a,b) => {
+
+    if(typeof a != "number"){
+        throw new ValidationError("Argumen pertama harus number");
+    }
+    
+    if(typeof b != "number"){
+        throw new ValidationError("Argumen kedua harus number");
+    }
+
+    if(a <= 0){
+        throw new ValidationError("Argumen pertama harus melebihi 0");
+    }
+
+    if(b <= 0){
+        throw new ValidationError("Argumen kedua harus melebihi 0");
+    }
+
+    if(b == a){
+        throw new ValidationError("Argumen pertama dan kedua tidak boleh sama");
+    }
+
+    if(b > a){
+        throw new ValidationError("Argumen pertama harus lebih besar dari argumen kedua");
+    }
+    
+}
+
+
 const euclidean = (m,n) => {
     let sisaBagi;
         for (let index = 0; n != 0; index++) {

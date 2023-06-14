@@ -1,15 +1,22 @@
 const Kongruen = require('./Kongruen');
 
-test("Direct Proof - 3, 24, 7", () => {
-    expect(Kongruen(3, 24, 7)).toBe(true);
+
+
+
+test("Simetrive - 7,12,5", () => {
+    expect(cek_kongruen(7,12,5)).toBe(true);
 });
 
-test("Direct Proof - -31, 11, 7", () => {
-    expect(Kongruen( -31, 11, 7)).toBe(true);
+test("Simetrive - 12,7,5", () => {
+    expect(cek_kongruen(12,7,5)).toBe(true);
 });
 
-test("Direct Proof - -15, -64, 7", () => {
-    expect(Kongruen(-15, -64, 7)).toBe(true);
+test("Transitive - 12,17,5", () => {
+    expect(cek_kongruen(12,17,5)).toBe(true);
+});
+
+test("Reflexive - 12,12,5", () => {
+    expect(cek_kongruen(12,12,3)).toBe(true);
 });
 
 test("Direct Proof - 13, -1, 7", () => {

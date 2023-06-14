@@ -30,6 +30,25 @@ const ValidateNumberInput = (a,b,mod) => {
         throw new ValidationError("Argumen ketiga harus number");
     }
 
+    if(typeof mod <= 0){
+        throw new ValidationError("modulus harus lebih dari 0");
+    }
+
+    if(Number.isInteger(a) || Number.isInteger(b)){
+        throw new ValidationError("Argumen pertama atau kedua harus bagian dari Integer");
+    }
+    
+
+    
+
+    // if(typeof mod < a){
+    //     throw new ValidationError("Argumen pertama harus lebih dari modulus");
+    // }
+
+    // if(typeof mod < b){
+    //     throw new ValidationError("Argumen kedua harus lebih dari modulus");
+    // }
+
     
 }
 
@@ -61,7 +80,11 @@ const konversi_ke_positif = (angka) => {
 
 // angka = getAngka()
 // console.log(cek_kongruen(angka[0],angka[1],angka[2]))
-console.log(cek_kongruen(false, null, "a"))
+// console.log(cek_kongruen(7,12,5))
+// console.log(cek_kongruen(12,7,5))
+// console.log(cek_kongruen(12,17,5))
+// console.log(cek_kongruen(12,17,5))
+console.log(Number.isInteger(12.43))
 
 module.exports = cek_kongruen;
 
