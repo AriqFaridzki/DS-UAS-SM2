@@ -1,17 +1,17 @@
-const readline = require('node:readline');
-const { stdin: input, stdout: output } = require('node:process');
-const rl = readline.createInterface({ input, output });
+// const readline = require('node:readline');
+// const { stdin: input, stdout: output } = require('node:process');
+// const rl = readline.createInterface({ input, output });
 
 
 
-// const test = new Ariq(1,2)
-// test.setFirst(3)
-// test.console()
+// // const test = new Ariq(1,2)
+// // test.setFirst(3)
+// // test.console()
 
-rl.question("input a number : ", (firstNumber)=>{
-    console.log(`you input : ${firstNumber}`)
-rl.close();
-});
+// rl.question("input a number : ", (firstNumber)=>{
+//     console.log(`you input : ${firstNumber}`)
+// rl.close();
+// });
 
 
 
@@ -46,7 +46,7 @@ let sisaBagi;
 
 }
 // eclidean(input)
-// eclidean(312, 70) //2
+eclidean(312, 70) //2
 // eclidean(80, 12) //4
 // eclidean(60, 18) //6
 // eclidean(45, 6) //6

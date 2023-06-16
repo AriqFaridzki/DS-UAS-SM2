@@ -1,9 +1,12 @@
 const konversi_ke_positif = (angka) => {
-    if (angka <= 0){
-        return -1 * angka
-    }
+    let hasilKonversi;
 
-    return angka
+    if (angka <= 0){
+        return hasilKonversi = -1 * angka 
+    }else{
+        return angka
+    }
+    
 }
 
 module.exports = konversi_ke_positif

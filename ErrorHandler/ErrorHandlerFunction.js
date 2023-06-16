@@ -14,9 +14,9 @@ const ValidateNumberInputKongruen = (a,b,mod) => {
         throw new ValidationError("Argumen ketiga harus number");
     }
 
-    if(mod <= 0){
-        throw new ValidationError("modulus harus lebih dari 0");
-    }
+    // if(mod <= 0){
+    //     throw new ValidationError("modulus harus lebih dari 0");
+    // }
 
     if(!Number.isInteger(a) || !Number.isInteger(b)){
         throw new ValidationError("Argumen pertama atau kedua harus bagian dari Integer");
@@ -34,6 +34,10 @@ const ValidateNumberInputEuclidean = (a,b) => {
         throw new ValidationError("Argumen kedua harus number");
     }
 
+    if(!Number.isInteger(a) || !Number.isInteger(b)){
+        throw new ValidationError("Argumen pertama atau kedua harus bagian dari Natural Number");
+    }
+
     if(a <= 0){
         throw new ValidationError("Argumen pertama harus melebihi 0");
     }
@@ -42,9 +46,9 @@ const ValidateNumberInputEuclidean = (a,b) => {
         throw new ValidationError("Argumen kedua harus melebihi 0");
     }
 
-    if(b > a){
-        throw new ValidationError("Argumen pertama harus lebih besar dari argumen kedua");
-    }
+    // if(b > a){
+    //     throw new ValidationError("Argumen pertama harus lebih besar dari argumen kedua");
+    // }
     
 }
 

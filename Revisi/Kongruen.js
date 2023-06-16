@@ -17,17 +17,56 @@
 const konversi_ke_positif = require("../Helper/KongruenHelper")
 const validation = require("../ErrorHandler/ErrorHandlerFunction")
 
+/**
+ *  Algoritma cek_kongruen(a,b, mod) a,b, mod ∈ Z
+ *  
+ * Deskripsi :
+ * 
+ *  READ a as angka pertama
+ *  READ b as angka kedua
+ *  READ mod as pembagi a and b
+ * 
+ *  INIT hasil to null
+ *  INIT hasilSelisih to COMPUTE hasilSelisih as CALL konversi_ke_positif with (a-b) RETURNING hasilKonversi
+ *  INIT modMutlak to COMPUTE modMutlak as CALL konversi_ke_positif with mod RETURNING hasilKonversi
+ *   
+ * 
+ *  BEGIN
+ * 
+ *     CALL ValidationNumberInputKongruen with a,b and mod
+ *     
+ *     COMPUTE hasil as hasilSelisih modulo modMutlak == 0 as Boolean type
+ *
+ *     IF hasil is true THEN
+ *          
+ *          RETURN a + " ≡ " + b + " (modulo " + mod + ") itu " + hasil + " and merupakan kelipatan dari " + mod
+ *     ELSE 
+ *          RETURN a + " ≡ " + b + " (modulo " + mod + ") itu " + hasil + " and bukan merupakan kelipatan dari " + mod
+ *     ENDIF
+ * 
+ *  EXCEPTION
+ *      WHEN exception type ValidationError from ValidationNumberInputKongruen
+ *          RETURN error.message
+ *  END
+ */
+
+
 const cek_kongruen = (a, b, mod) => {
-let hasil;
+
+let penentu;
+let hasilSelisih = konversi_ke_positif(a - b)
+// let hasilSelisih = a - b    
+let modMutlak = konversi_ke_positif(mod)
     try {
         validation.ValidateNumberInputKongruen(a,b,mod);
-        hasil = ((konversi_ke_positif(a - b)) % mod == 0);
+        penentu = (hasilSelisih % modMutlak == 0);
+        // test = ((konversi_ke_positif(a - b)) % mod);
 
-        if (hasil == true) {
-            return `${a} ≡ ${b} (mod ${mod}) itu ${hasil} dan merupakan kelipatan dari ${mod}`
+        if (penentu == true) {
+            return `${a} ≡ ${b} (modulo ${mod}) itu ${penentu} dan merupakan kelipatan dari ${mod}`
             // return hasil
         } else
-            return `${a} ≡ ${b} (mod ${mod}) itu ${hasil} dan bukan merupakan kelipatan dari ${mod}`
+            return `${a} ≡ ${b} (modulo ${mod}) itu ${penentu} dan bukan merupakan kelipatan dari ${mod}`
             // return hasil
     } catch (error) {
         return error.message
@@ -38,9 +77,9 @@ let hasil;
 // angka = getAngka()
 
 // console.log(cek_kongruen(angka[0],angka[1],angka[2]))
-console.log(cek_kongruen(7,12,5))
-// console.log(cek_kongruen(12,7,5))
-// console.log(cek_kongruen(12,17,"A"))
+console.log(cek_kongruen(7,12,-5))
+console.log(cek_kongruen(12,7,-5))
+console.log(cek_kongruen(12,17,"A"))
 
 module.exports = cek_kongruen;
 
