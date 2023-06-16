@@ -27,15 +27,15 @@ const validation = require("../ErrorHandler/ErrorHandlerFunction")
  *  READ mod as pembagi a and b
  * 
  *  INIT hasil to null
- *  INIT hasilSelisih to COMPUTE hasilSelisih as CALL konversi_ke_positif with (a-b) RETURNING hasilKonversi
- *  INIT modMutlak to COMPUTE modMutlak as CALL konversi_ke_positif with mod RETURNING hasilKonversi
+ *  INIT hasilSelisih to CALCULATE hasilSelisih as CALL konversi_ke_positif with (a-b) RETURNING hasilKonversi
+ *  INIT modMutlak to CALCULATE modMutlak as CALL konversi_ke_positif with mod RETURNING hasilKonversi
  *   
  * 
  *  BEGIN
  * 
  *     CALL ValidationNumberInputKongruen with a,b and mod
  *     
- *     COMPUTE hasil as hasilSelisih modulo modMutlak == 0 as Boolean type
+ *     CALCULATE hasil as hasilSelisih modulo modMutlak == 0 as Boolean type
  *
  *     IF hasil is true THEN
  *          
