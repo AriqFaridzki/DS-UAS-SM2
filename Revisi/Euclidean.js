@@ -26,7 +26,7 @@
  * 
  *     CALL ValidateNumberInputEuclidean with m,n
  *     
- *     WHILE n is NOT EQUAL to 0
+ *     FOR n is NOT EQUAL to 0
  *          CALCULATE sisaBagi as m % n
  *          CALCULATE m divide by n
  *          
@@ -61,16 +61,14 @@ const euclidean = (m,n) => {
 
         let sisaBagi;
         let perulangan = 0
-        // FOR while n is not 
-        
-        while (n != 0){
-            //rumus : m = hasil_bagi * n + sisaBagi 
-            
+        // FOR  n is not 
+
+        for (let index = 1; n != 0; ++index) {
             sisaBagi = m%n // 
             m/n // biar integer (ndak koma)
             m = n // agar bisa membagi terus si n nya :D
             n = sisaBagi  // ganti posisi  (ditingal awawajjw)
-            perulangan++
+            perulangan = index
         }
        
         if(n == 0){
