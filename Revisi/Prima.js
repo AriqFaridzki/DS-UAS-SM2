@@ -76,7 +76,13 @@ const algoritmaPrima1 = (number)=>{
     console.log(`bilangan prima yang <= √${number} adalah ${hasilPrima}`)
         //FOR each element in the hasilPrima array less than index
     for (let index = 0; index < hasilPrima.length; index++) {
-        // console.log(` hasil dari ${number} % ${ hasilPrima[index]} : ${number % hasilPrima[index]}`)
+        if(number % hasilPrima[index] == 0){
+            console.log(` hasil dari ${number} % ${ hasilPrima[index]} : ${number % hasilPrima[index]} <-- Dibagi Habis`)
+        }else{
+            console.log(` hasil dari ${number} % ${ hasilPrima[index]} : ${number % hasilPrima[index]}`)
+        }
+
+        
             //
             //SET pembagi by adding hasilPrima[index] element to it
         if(Math.trunc(number % hasilPrima[index]) == 0){
@@ -113,8 +119,8 @@ const algoritmaPrima1 = (number)=>{
 
 // angka = getAngka();
 // console.log(algoritmaPrima1(1))
-// console.log(algoritmaPrima1(1))
-console.log(12.2312312.toFixed(2))
+console.log(algoritmaPrima1(12))
+// console.log(12.2312312.toFixed(2))
 module.exports = algoritmaPrima1
 
 //https://collegedunia.com/exams/prime-numbers-mathematics-articleid-2785

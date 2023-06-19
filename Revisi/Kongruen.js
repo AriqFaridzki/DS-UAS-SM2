@@ -61,13 +61,15 @@ let modMutlak = konversi_ke_positif(mod)
         validation.ValidateNumberInputKongruen(a,b,mod);
         penentu = (hasilSelisih % modMutlak == 0);
         // test = ((konversi_ke_positif(a - b)) % mod);
+        console.log(`==== ${a} - ${b} ≡ ${mod} ====`)
+        console.log(`\n${a} - ${b} = ${a - b} % ${modMutlak} == ${hasilSelisih % modMutlak}`)
 
         if (penentu == true) {
-            return `${a} ≡ ${b} (modulo ${mod}) itu ${penentu} dan merupakan kelipatan dari ${mod}`
+            return `${a} ≡ ${b} (modulo ${mod}) itu ${penentu} dan merupakan kelipatan dari ${mod} \n`
             // return hasil
         } else
             return `${a} ≡ ${b} (modulo ${mod}) itu ${penentu} dan bukan merupakan kelipatan dari ${mod}`
-            // return hasil
+            return hasil
     } catch (error) {
         return error.message
     }
@@ -77,9 +79,9 @@ let modMutlak = konversi_ke_positif(mod)
 // angka = getAngka()
 
 // console.log(cek_kongruen(angka[0],angka[1],angka[2]))
-console.log(cek_kongruen(7,12,-5))
-console.log(cek_kongruen(12,7,-5))
-console.log(cek_kongruen(12,17,"A"))
+console.log(cek_kongruen(7,12,5))
+console.log(cek_kongruen(12,7,4))
+// console.log(cek_kongruen(12,17,"A"))
 
 module.exports = cek_kongruen;
 
