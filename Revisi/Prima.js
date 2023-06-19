@@ -76,7 +76,7 @@ const algoritmaPrima1 = (number)=>{
     console.log(`bilangan prima yang <= √${number} adalah ${hasilPrima}`)
         //FOR each element in the hasilPrima array less than index
     for (let index = 0; index < hasilPrima.length; index++) {
-        if(number % hasilPrima[index] == 0){
+        if(number % hasilPrima[index] == 0){ // line  79 - 83
             console.log(` hasil dari ${number} % ${ hasilPrima[index]} : ${number % hasilPrima[index]} <-- Dibagi Habis`)
         }else{
             console.log(` hasil dari ${number} % ${ hasilPrima[index]} : ${number % hasilPrima[index]}`)

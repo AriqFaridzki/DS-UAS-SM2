@@ -61,19 +61,19 @@ const euclidean = (m,n) => {
 
         let sisaBagi;
         let perulangan = 0
-        let temp;
+        let temp; // nambah lagi 
         // FOR  n is not
 
         console.log(`PBB : ${m},${n} \n`)
         for (let index = 1; n != 0; ++index) {
-            temp = sisaBagi
+            temp = sisaBagi // nambah lagi 
 
             sisaBagi = m%n //
             // console.log(temp)
-            if(sisaBagi == 0){
+            if(sisaBagi == 0){ // nambah lagi  IF
                 console.log(`FPB Ketemu! : ${temp}\n`)
             }
-            console.log(` ${m} = ${Math.trunc(m/n)} * ${n} + ${sisaBagi}`)
+            console.log(` ${m} = ${Math.trunc(m/n)} * ${n} + ${sisaBagi}`) // nambah lagi 
             // console.log("                ↓\n            ____\n          ↓")
             m/n
             m = n // agar bisa membagi terus si n nya :D

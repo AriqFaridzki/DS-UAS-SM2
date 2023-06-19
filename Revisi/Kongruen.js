@@ -61,8 +61,8 @@ let modMutlak = konversi_ke_positif(mod)
         validation.ValidateNumberInputKongruen(a,b,mod);
         penentu = (hasilSelisih % modMutlak == 0);
         // test = ((konversi_ke_positif(a - b)) % mod);
-        console.log(`==== ${a} - ${b} ≡ ${mod} ====`)
-        console.log(`\n${a} - ${b} = ${a - b} % ${modMutlak} == ${hasilSelisih % modMutlak}`)
+        console.log(`==== ${a} - ${b} ≡ ${mod} ====`) //tambahan
+        console.log(`\n${a} - ${b} = ${a - b} % ${modMutlak} == ${hasilSelisih % modMutlak}`) //tambahan
 
         if (penentu == true) {
             return `${a} ≡ ${b} (modulo ${mod}) itu ${penentu} dan merupakan kelipatan dari ${mod} \n`
