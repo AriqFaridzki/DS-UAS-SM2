@@ -12,7 +12,7 @@
                 }
             }
 
-            stage('Testing Jest') { 
+            stage('Test') { 
                 steps {
                     sh 'npm test'
                 }
