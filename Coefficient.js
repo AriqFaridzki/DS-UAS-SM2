@@ -29,3 +29,5 @@ const cariSuku = (sukuKe ,a,b, pangkat) => {
 
 
 cariSuku(7,2,-1,11)
+
+// asda
