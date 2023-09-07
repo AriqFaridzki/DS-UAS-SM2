@@ -86,8 +86,8 @@ const euclidean = (m,n) => {
 
         if(n == 0){
 
-            return `FPBnya adalah ${m} dan melakukan perulangan sebanyak ${perulangan} kali \n\n`
-            // return m //buat testing aja
+            // return `FPBnya adalah ${m} dan melakukan perulangan sebanyak ${perulangan} kali \n\n`
+            return m //buat testing aja
         }
 
     } catch (error) {
